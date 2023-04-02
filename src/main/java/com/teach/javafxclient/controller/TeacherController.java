@@ -169,7 +169,7 @@ public class TeacherController extends ToolController {
     }
 
     /**
-     * 选择教师信息表中的一行数据，将数据显示到学生信息表单中
+     * 选择教师信息表中的一行数据，将数据显示到教师信息表单中
      */
     protected void changeTeacherInfo() {
         Map form = dataTableView.getSelectionModel().getSelectedItem();

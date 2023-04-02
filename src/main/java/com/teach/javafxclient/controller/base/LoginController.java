@@ -25,9 +25,9 @@ public class LoginController {
      */
     @FXML
     public void initialize() {
-    //   usernameField.setText("admin");
-    //    usernameField.setText("202100161167");
-            usernameField.setText("2022030001");
+        usernameField.setText("admin");
+        //    usernameField.setText("202100161167");
+        //       usernameField.setText("2022030001");
         passwordField.setText("123456");
     }
 

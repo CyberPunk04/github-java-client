@@ -19,6 +19,7 @@ public class Person {
     private Integer personId;
     private String num;
     private String name;
+    private String type;
     private String dept;
     private String card;
     private String gender;
@@ -37,6 +38,15 @@ public class Person {
         this.num = num;
         this.name = name;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public Integer getPersonId() {
         return personId;
     }
