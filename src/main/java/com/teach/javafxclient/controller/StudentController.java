@@ -244,7 +244,7 @@ public class StudentController extends ToolController {
         req.put("studentId", studentId);
         DataResponse res = HttpRequestUtil.request("/api/student/studentDelete",req);
         if(res.getCode() == 0) {
-            MessageDialog.showDialog("删除成功！");
+            MessageDialog.showDialog("该学生信息删除成功！");
             onQueryButtonClick();
         }
         else {
