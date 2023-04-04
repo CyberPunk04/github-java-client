@@ -91,14 +91,14 @@ public class CourseController extends ToolController {
         if(res != null && res.getCode()== 0) {
             courseList = (ArrayList<Map>)res.getData();
         }
-        numColumn.setCellValueFactory(new MapValueFactory("num"));  //设置列值工程属性
-        nameColumn.setCellValueFactory(new MapValueFactory<>("name"));
+        numColumn.setCellValueFactory(new MapValueFactory("courseNum"));  //设置列值工程属性
+        nameColumn.setCellValueFactory(new MapValueFactory<>("courseName"));
         creditColumn.setCellValueFactory(new MapValueFactory<>("credit"));
-        hourColumn.setCellValueFactory(new MapValueFactory<>("hour"));
-        typeColumn.setCellValueFactory(new MapValueFactory<>("type"));
-        statusColumn.setCellValueFactory(new MapValueFactory<>("status"));
-        descriptionColumn.setCellValueFactory(new MapValueFactory<>("description"));
-        remarkColumn.setCellValueFactory(new MapValueFactory<>("remark"));
+        hourColumn.setCellValueFactory(new MapValueFactory<>("courseHour"));
+        typeColumn.setCellValueFactory(new MapValueFactory<>("courseType"));
+        statusColumn.setCellValueFactory(new MapValueFactory<>("courseStatus"));
+        descriptionColumn.setCellValueFactory(new MapValueFactory<>("courseDesc"));
+        remarkColumn.setCellValueFactory(new MapValueFactory<>("courseRemark"));
 
         TableView.TableViewSelectionModel<Map> tsm = dataTableView.getSelectionModel();
         ObservableList<Integer> list = tsm.getSelectedIndices();
@@ -137,14 +137,14 @@ public class CourseController extends ToolController {
             return;
         }
         form = (Map)res.getData();
-        numField.setText(CommonMethod.getString(form, "num"));
-        nameField.setText(CommonMethod.getString(form, "name"));
+        numField.setText(CommonMethod.getString(form, "courseNum"));
+        nameField.setText(CommonMethod.getString(form, "courseName"));
         creditField.setText(CommonMethod.getString(form, "credit"));
-        hourField.setText(CommonMethod.getString(form, "hour"));
-        typeField.setText(CommonMethod.getString(form, "type"));
-        statusField.setText(CommonMethod.getString(form, "status"));
-        descField.setText(CommonMethod.getString(form, "description"));
-        remarkField.setText(CommonMethod.getString(form, "remark"));
+        hourField.setText(CommonMethod.getString(form, "courseHour"));
+        typeField.setText(CommonMethod.getString(form, "courseType"));
+        statusField.setText(CommonMethod.getString(form, "courseStatus"));
+        descField.setText(CommonMethod.getString(form, "courseDesc"));
+        remarkField.setText(CommonMethod.getString(form, "courseRemark"));
 
     }
     /**
@@ -216,11 +216,11 @@ public class CourseController extends ToolController {
         form.put("courseNum",numField.getText());
         form.put("courseName",nameField.getText());
         form.put("credit",creditField.getText());
-        form.put("hour",hourField.getText());
-        form.put("type",typeField.getText());
-        form.put("status",statusField.getText());
-        form.put("description",descField.getText());
-        form.put("remark",remarkField.getText());
+        form.put("courseHour",hourField.getText());
+        form.put("courseType",typeField.getText());
+        form.put("courseStatus",statusField.getText());
+        form.put("courseDesc",descField.getText());
+        form.put("courseRemark",remarkField.getText());
         DataRequest req = new DataRequest();
         req.put("courseId", courseId);
         req.put("form", form);

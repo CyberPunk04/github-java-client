@@ -16,14 +16,14 @@ package com.teach.javafxclient.model;
 public class Course {
 
     private Integer courseId;
-    private String CourseNum;
-    private String CourseName;
-    private String CourseHour;
-    private String CourseType;
+    private String courseNum;
+    private String courseName;
+    private String courseHour;
+    private String courseType;
     private String credit;
-    private String CourseDesc;
-    private String CourseStatus;
-    private String CourseRemark;
+    private String courseDesc;
+    private String courseStatus;
+    private String courseRemark;
 
     private Course preCourse;
 
@@ -36,27 +36,35 @@ public class Course {
     }
 
     public String getCourseNum() {
-        return CourseNum;
+        return courseNum;
     }
 
     public void setCourseNum(String courseNum) {
-        CourseNum = courseNum;
-    }
-
-    public String getCourseHour() {
-        return CourseHour;
-    }
-
-    public void setCourseHour(String courseHour) {
-        CourseHour = courseHour;
+        this.courseNum = courseNum;
     }
 
     public String getCourseName() {
-        return CourseName;
+        return courseName;
     }
 
     public void setCourseName(String courseName) {
-        CourseName = courseName;
+        this.courseName = courseName;
+    }
+
+    public String getCourseHour() {
+        return courseHour;
+    }
+
+    public void setCourseHour(String courseHour) {
+        this.courseHour = courseHour;
+    }
+
+    public String getCourseType() {
+        return courseType;
+    }
+
+    public void setCourseType(String courseType) {
+        this.courseType = courseType;
     }
 
     public String getCredit() {
@@ -67,35 +75,27 @@ public class Course {
         this.credit = credit;
     }
 
-    public String getCourseType() {
-        return CourseType;
-    }
-
-    public void setCourseType(String courseType) {
-        CourseType = courseType;
-    }
-
     public String getCourseDesc() {
-        return CourseDesc;
+        return courseDesc;
     }
 
     public void setCourseDesc(String courseDesc) {
-        CourseDesc = courseDesc;
+        this.courseDesc = courseDesc;
     }
 
     public String getCourseStatus() {
-        return CourseStatus;
+        return courseStatus;
     }
 
-    public void setCourseStatus(String CourseStatus) {
-        this.CourseStatus = CourseStatus;
+    public void setCourseStatus(String courseStatus) {
+        this.courseStatus = courseStatus;
     }
 
     public String getCourseRemark() {
-        return CourseRemark;
+        return courseRemark;
     }
 
     public void setCourseRemark(String courseRemark) {
-        CourseRemark = courseRemark;
+        this.courseRemark = courseRemark;
     }
 }
